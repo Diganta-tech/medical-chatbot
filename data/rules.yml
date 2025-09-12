@@ -1,0 +1,44 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- rule: Provide disease info
+  steps:
+    - intent: ask_disease_info
+    - action: action_retrieve_medical_info
+
+- rule: Provide symptoms info
+  steps:
+    - intent: ask_symptoms
+    - action: action_retrieve_medical_info
+
+- rule: Provide prevention info
+  steps:
+    - intent: ask_prevention
+    - action: action_retrieve_medical_info
+
+- rule: General medical info
+  steps:
+    - intent: ask_medical_info
+    - action: action_retrieve_medical_info
+
+- rule: Fallback → RAG
+  steps:
+    - intent: nlu_fallback
+    - action: action_retrieve_medical_info
+
+- rule: Handle symptom-based queries
+  steps:
+    - intent: inform_symptoms
+    - action: action_symptom_checker
+

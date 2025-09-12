@@ -1,0 +1,133 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: ask_disease_info
+    examples: |
+      - what is cancer
+      - explain diabetes
+      - tell me about malaria
+      - define hypertension
+      - give me information about asthma
+
+  - intent: ask_symptoms
+    examples: |
+      - what are the symptoms of dengue
+      - how do I know if I have pneumonia
+      - symptoms of covid
+      - signs of anemia
+
+  - intent: ask_prevention
+    examples: |
+      - how to prevent malaria
+      - treatment for diabetes
+      - prevention of heart disease
+      - cure for cholera
+      - how can I avoid cancer
+
+  - intent: ask_medical_info
+    examples: |
+      - tell me something about tuberculosis
+      - explain this disease
+      - can you give me medical details
+      - health info about hepatitis
+      - I want to know more about arthritis
+
+  - intent: inform_symptoms
+    examples: |
+      - I have fever and cough
+      - I am suffering from chest pain and shortness of breath
+      - I feel weak and tired with dizziness
+      - I have stomach pain and nausea
+      - My head hurts and I feel lightheaded
+      - I have chills and sweating
+      - I have sore throat and runny nose
+      - I feel pain in my joints and muscles

@@ -1,0 +1,67 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+#
+
+- story: Ask about a disease
+  steps:
+    - intent: ask_disease_info
+    - action: action_retrieve_medical_info
+
+- story: Ask about symptoms of a disease
+  steps:
+    - intent: ask_symptoms
+    - action: action_retrieve_medical_info
+
+- story: Ask about prevention of a disease
+  steps:
+    - intent: ask_prevention
+    - action: action_retrieve_medical_info
+
+- story: User gives symptoms → Bot predicts disease
+  steps:
+    - intent: inform_symptoms
+    - action: action_symptom_checker
+
+- story: Mix — user first asks about a disease, then shares symptoms
+  steps:
+    - intent: ask_disease_info
+    - action: action_retrieve_medical_info
+    - intent: inform_symptoms
+    - action: action_symptom_checker
+
+- story: Mix — user first shares symptoms, then asks about prevention
+  steps:
+    - intent: inform_symptoms
+    - action: action_symptom_checker
+    - intent: ask_prevention
+    - action: action_retrieve_medical_info
+

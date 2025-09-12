@@ -1,0 +1,10 @@
+{
+  "malaria": "malaria",
+  "tuberculosis": "tuberculosis",
+  "diabetes": "diabetes",
+  "cholera": "cholera",
+  "asthma": "asthma",
+  "dengue": "dengue",
+  "typhoid": "typhoid",
+  "covid": "covid"
+}
