@@ -1,0 +1,17 @@
+{
+  "0": "affirm",
+  "1": "ask_disease_info",
+  "2": "ask_medical_info",
+  "3": "ask_prevention",
+  "4": "ask_symptoms",
+  "5": "bot_challenge",
+  "6": "deny",
+  "7": "emergency_ambulance",
+  "8": "emergency_hospital",
+  "9": "goodbye",
+  "10": "greet",
+  "11": "inform_symptoms",
+  "12": "mood_great",
+  "13": "mood_unhappy",
+  "14": "provide_location"
+}

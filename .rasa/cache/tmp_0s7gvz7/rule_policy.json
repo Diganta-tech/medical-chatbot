@@ -1,0 +1,52 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_hospital\"}}]": "action_set_request_type",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_hospital\"}}, {\"prev_action\": {\"action_name\": \"action_set_request_type\"}, \"user\": {\"intent\": \"emergency_hospital\"}}]": "utter_ask_location",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_hospital\"}}, {\"prev_action\": {\"action_name\": \"action_set_request_type\"}, \"user\": {\"intent\": \"emergency_hospital\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_location\"}, \"user\": {\"intent\": \"emergency_hospital\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "action_retrieve_medical_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_disease_info\"}}]": "action_retrieve_medical_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_disease_info\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"ask_disease_info\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_symptoms\"}}]": "action_retrieve_medical_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_symptoms\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"ask_symptoms\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_ambulance\"}}]": "action_set_request_type",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_ambulance\"}}, {\"prev_action\": {\"action_name\": \"action_set_request_type\"}, \"user\": {\"intent\": \"emergency_ambulance\"}}]": "utter_ask_location",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_ambulance\"}}, {\"prev_action\": {\"action_name\": \"action_set_request_type\"}, \"user\": {\"intent\": \"emergency_ambulance\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_location\"}, \"user\": {\"intent\": \"emergency_ambulance\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_prevention\"}}]": "action_retrieve_medical_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_prevention\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"ask_prevention\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_medical_info\"}}]": "action_retrieve_medical_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_medical_info\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"ask_medical_info\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"inform_symptoms\"}}]": "action_symptom_checker",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"inform_symptoms\"}}, {\"prev_action\": {\"action_name\": \"action_symptom_checker\"}, \"user\": {\"intent\": \"inform_symptoms\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"inform_symptoms\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"inform_symptoms\"}}, {\"prev_action\": {\"action_name\": \"action_symptom_checker\"}, \"user\": {\"intent\": \"inform_symptoms\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_disease_info\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_prevention\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_prevention\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"ask_prevention\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_symptoms\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_medical_info\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"ask_medical_info\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_symptoms\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"ask_symptoms\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_disease_info\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_medical_info\"}, \"user\": {\"intent\": \"ask_disease_info\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_medical_info\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]"
+    ]
+  }
+}

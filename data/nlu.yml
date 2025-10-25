@@ -130,4 +130,71 @@ nlu:
       - My head hurts and I feel lightheaded
       - I have chills and sweating
       - I have sore throat and runny nose
-      - I feel pain in my joints and muscles
+      - i feel pain in my joints and muscles
+      
+  # - intent: emergency_ambulance
+  #   examples: |
+  #     - 1
+  #     - ambulance
+  #     - call ambulance
+  #     - Call Ambulance
+  #     - option 1
+  #     - I choose 1   
+  #     - send ambulance
+  #     - I need ambulance
+  #     - nearest ambulance
+  #     - ambulance near me
+
+  # - intent: emergency_hospital
+  #   examples: |
+  #     - 2
+  #     - hospital
+  #     - nearest hospital
+  #     - Find Nearest Hospital
+  #     - option 2
+  #     - I choose 2
+  #     - I need hospital
+  #     - hospital near me
+  #     - find hospital
+  #     - I want a hospital
+      
+  - intent: provide_location
+    examples: |  
+      - I am in Kolkata
+      - Pincode 700107
+      - My location is Mumbai
+      - Delhi
+      - 560001
+      - Howrah, West Bengal
+      - I am in Kolkata, India
+      - Pincode 700107 India
+      - Location is Delhi, India
+      - I'm at Mumbai, India
+      - Bangalore India
+
+
+  - intent: emergency_help
+    examples: |
+      - help
+      - emergency
+      - please send help
+      - sos
+      - urgent medical help   
+
+  # - intent: provide_phone
+  #   examples: |
+  #     - my number is +919876543210
+  #     - please call me at +919876543210
+  #     - 9830098300
+  #     - phone: 9001234567 
+  #     - +917876548210
+  - intent: vaccine
+    examples: |
+      - vaccination schedule
+      - vaccination
+      - vaccination slot
+  - intent: pincode
+    examples: |
+      - check by pincode
+      - by pin
+      - pincode

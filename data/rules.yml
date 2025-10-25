@@ -1,7 +1,11 @@
 version: "3.1"
 
 rules:
-
+- rule: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
 - rule: Say goodbye anytime the user says goodbye
   steps:
     - intent: goodbye
@@ -42,3 +46,95 @@ rules:
     - intent: inform_symptoms
     - action: action_symptom_checker
 
+#- rule: Hospital request (ask for location)
+#  steps:
+#    - intent: emergency_hospital
+#    - action: action_set_request_type
+#    - action: utter_ask_location
+
+
+#- rule: Ambulance request (ask for location)
+#  steps:
+#    - intent: emergency_ambulance
+#    - action: action_set_request_type
+#    - action: utter_ask_location
+
+
+#- rule: Provide location -> find service
+#  steps:
+#    - intent: provide_location
+#    - action: action_find_service
+
+
+# - rule: Emergency help request
+#   steps:
+#     - intent: emergency_help
+#     - action: utter_ask_location
+
+# - rule: Got location for emergency
+#   steps:
+#     - intent: provide_location
+#     - action: utter_ask_phone
+
+# - rule: Got phone number
+#   steps:
+#     - intent: provide_phone
+#     - action: action_emergency_help
+
+# - rule: Start emergency help
+#   steps:
+#     - intent: emergency_help
+#     - action: utter_ask_location
+
+# - rule: Collect phone number
+#   condition:
+#     - slot_was_set:
+#         - location: true
+#   steps:
+#     - intent: provide_location
+#     - action: utter_ask_phone
+
+# - rule: Trigger emergency help
+#   condition:
+#     - slot_was_set:
+#         - phone: true
+#   steps:
+#     - intent: provide_phone
+#     - action: action_emergency_help
+
+- rule: Handle emergency help
+  steps:
+    - intent: emergency_help
+    - action: utter_ask_location
+
+- rule: Process emergency after location
+  steps:
+    - intent: provide_location
+    - action: action_emergency_help
+
+## for vaccination
+- rule: vaccination starter 
+  steps:
+  - intent: vaccine
+  # - action: utter_vaccine
+  - action: utter_How_slots
+
+- rule: Activate pincode form
+  steps:
+  - intent: pincode
+  - action: slot_pincode_form
+  - active_loop: slot_pincode_form
+
+- rule: Submit pincode form
+  condition:
+  # Condition that form is active.
+  - active_loop: slot_pincode_form
+  steps:
+  # Form is deactivated
+  - action: slot_pincode_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: action_pincode_submit
+    

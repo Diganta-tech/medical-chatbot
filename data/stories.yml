@@ -29,39 +29,52 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-#
+#vaccination
 
-- story: Ask about a disease
-  steps:
-    - intent: ask_disease_info
-    - action: action_retrieve_medical_info
+# - story: vaccination starter 
+#   steps:
+#   - intent: vaccine
+#   - action: utter_vaccine
+#   - action: utter_How_slots
 
-- story: Ask about symptoms of a disease
-  steps:
-    - intent: ask_symptoms
-    - action: action_retrieve_medical_info
 
-- story: Ask about prevention of a disease
-  steps:
-    - intent: ask_prevention
-    - action: action_retrieve_medical_info
+# - story: Hospital flow (user provides location)
+#   steps:
+#   - intent: emergency_hospital
+#   - action: action_set_request_type
+#   - action: utter_ask_location
+#   - intent: provide_location
+#   - action: action_find_service
 
-- story: User gives symptoms → Bot predicts disease
-  steps:
-    - intent: inform_symptoms
-    - action: action_symptom_checker
 
-- story: Mix — user first asks about a disease, then shares symptoms
-  steps:
-    - intent: ask_disease_info
-    - action: action_retrieve_medical_info
-    - intent: inform_symptoms
-    - action: action_symptom_checker
+# - story: Ambulance flow (user provides location)
+#   steps:
+#   - intent: emergency_ambulance
+#   - action: action_set_request_type
+#   - action: utter_ask_location
+#   - intent: provide_location
+#   - action: action_find_service
 
-- story: Mix — user first shares symptoms, then asks about prevention
-  steps:
-    - intent: inform_symptoms
-    - action: action_symptom_checker
-    - intent: ask_prevention
-    - action: action_retrieve_medical_info
+
+# - story: User asks ambulance after hospitals (switch flow)
+#   steps:
+#   - intent: emergency_hospital
+#   - action: action_set_request_type
+#   - action: utter_ask_location
+#   - intent: provide_location
+#   - action: action_find_service
+#   - intent: emergency_ambulance
+#   - action: action_set_request_type
+#   - action: utter_ask_location
+#   - intent: provide_location
+#   - action: action_find_service
+
+# - story: Emergency help full flow
+#   steps:
+#     - intent: emergency_help
+#     - action: utter_ask_location
+#     - intent: provide_location
+#     - action: utter_ask_phone
+#     - intent: provide_phone
+#     - action: action_emergency_help
 

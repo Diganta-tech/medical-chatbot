@@ -1,0 +1,72 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "ask_disease_info": 1,
+        "ask_medical_info": 2,
+        "ask_prevention": 3,
+        "ask_symptoms": 4,
+        "back": 5,
+        "bot_challenge": 6,
+        "deny": 7,
+        "emergency_ambulance": 8,
+        "emergency_help": 9,
+        "emergency_hospital": 10,
+        "goodbye": 11,
+        "greet": 12,
+        "inform_symptoms": 13,
+        "mood_great": 14,
+        "mood_unhappy": 15,
+        "nlu_fallback": 16,
+        "out_of_scope": 17,
+        "provide_location": 18,
+        "provide_phone": 19,
+        "restart": 20,
+        "session_start": 21,
+        "symptoms_check_detailed": 22
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_retrieve_medical_info": 13,
+        "action_symptom_checker": 14,
+        "action_symptom_checker_extractive": 15,
+        "action_set_request_type": 16,
+        "action_find_service": 17,
+        "action_emergency_help": 18,
+        "utter_ask_location": 19,
+        "utter_ask_phone": 20,
+        "utter_cheer_up": 21,
+        "utter_did_that_help": 22,
+        "utter_emergency_confirm": 23,
+        "utter_goodbye": 24,
+        "utter_greet": 25,
+        "utter_happy": 26,
+        "utter_iamabot": 27
+      },
+      "entities": {
+        "location": 0,
+        "phone": 1
+      },
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

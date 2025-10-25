@@ -14,12 +14,28 @@ intents:
   - ask_medical_info     # general catch-all
   - nlu_fallback
   - inform_symptoms
-  - symptoms_check_detailed
-  
+#  - symptoms_check_detailed
+  - provide_location
+#  - emergency_ambulance
+#  - emergency_hospital
+  - emergency_help
+#  - provide_phone
+  - vaccine
+  - pincode
+       
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hello! I'm your health assistant Uddai . Hope you're doing well today.\n\n
+
+          Here are some common health concerns people often face:\n
+          1. Fever & Cold\n
+          2. Headache & Migraine\n
+          3. Stomach Pain & Indigestion\n
+          4. Skin Problems (rashes, itching)\n
+          5. General Weakness & Fatigue\n\n
+
+          Please press the number of the issue you'd like to know more about."
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -37,17 +53,138 @@ responses:
   utter_iamabot:
   - text: "I am a medical assistant bot, here to help with health info."
 
+  utter_ask_location:
+  - text: "🏥 Please share your location (city or pincode) "
+
+  utter_vaccine:
+  - text: I am here to help you, find the available slots near you for the Vaccination
+
+  utter_How_slots:
+  - text: How do you want to check for the slots availability?
+
+  utter_ask_pincode:
+    - text: Enter your pincode
+  # utter_ask_phone:
+  #   - text: "📞 Please provide your phone number so we can notify you."
+
+  # utter_help_confirmed:
+  # - text: "✅ Your emergency request is being processed. Please wait while we notify ambulance and hospital services."
+  # utter_vaccination_prompt:
+  #   - text: "💉 Please enter your pincode + date, or district id + date, or latitude & longitude."
+
+entities:
+  - location
+  #- phone
+  - pincode
+
+# slots:
+#   location:
+#     type: text
+#     mappings:
+#       - type: from_text
+
+####
+
+slots:
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+  pincode:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: pincode
+      - type: from_text
+
+  date:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text    
+  requested_slot:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+forms:
+  slot_pincode_form:
+    required_slots:
+      - pincode     
+      - date
+        
+
+e2e_actions: []
+# forms:
+#   slot_pincode_form:
+#     required_slots:
+#       - pincode
+#       - date
+
+#   slot_district_form:
+#     required_slots:
+#       - district_id
+#       - date
+
+#   slot_location_form:
+#     required_slots:
+#       - lattitude
+#       - longitude
+
+
+
+#e2e_actions: []
+
+   
+ 
+# slots:
+#   location:
+#     type: text
+#     influence_conversation: false
+#     mappings:
+#       - type: from_entity   # fills the slot directly from user message
+#         entity: location
+#       - type: from_text
+
+  # request_type:
+  #   type: text
+  #   influence_conversation: false
+  #   mappings:
+  #     - type: from_intent
+  #       intent: emergency_hospital
+  #       value: hospital
+  #     - type: from_intent
+  #       intent: emergency_ambulance
+  #       value: ambulance
+
+  # phone:
+  #   type: text
+  #   influence_conversation: false
+  #   mappings:
+  #     - type: from_entity
+  #       entity: phone
+  #     - type: from_text
+
 
 actions:
   - action_retrieve_medical_info # (RAG)
   - action_symptom_checker
   - action_symptom_checker_extractive
+#  - action_set_request_type
+  - action_emergency_help
+#  - action_find_service
+  - action_pincode_submit
+  
 #  - action_vaccination_schedule
 #  - action_facility_lookup
 #  - action_outbreak_alert
 #  - action_emergency_handoff
 
-
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

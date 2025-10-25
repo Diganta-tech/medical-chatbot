@@ -1,0 +1,21 @@
+{
+  "0": "affirm",
+  "1": "ask_disease_info",
+  "2": "ask_medical_info",
+  "3": "ask_prevention",
+  "4": "ask_symptoms",
+  "5": "bot_challenge",
+  "6": "deny",
+  "7": "district",
+  "8": "emergency_help",
+  "9": "goodbye",
+  "10": "greet",
+  "11": "inform_symptoms",
+  "12": "location",
+  "13": "mood_great",
+  "14": "mood_unhappy",
+  "15": "my_email",
+  "16": "pincode",
+  "17": "provide_location",
+  "18": "restart"
+}
